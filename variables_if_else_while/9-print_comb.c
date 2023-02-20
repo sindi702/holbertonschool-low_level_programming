@@ -7,12 +7,14 @@
 int main(void)
 {
 int x;
-for (x = 0; x < 10; x++)
-putchar(x + '0');
-if (x < 9)
+for (x = 48; x < 58; x++)
 {
-putchar(',');
-putchar(' ');
+putchar(x);
+if (x < 57)
+{
+putchar(44);
+putchar(32);
+}
 }
 putchar('\n');
 return (0);
