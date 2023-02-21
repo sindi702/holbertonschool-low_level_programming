@@ -1,11 +1,12 @@
 #include "main.h"
 /**
- *  * print_alphabet - main func
- *   * Return: Always 0 (Success)
- *    */
+ * _islower - main func
+ * Return: Always 0 (Success)
+ * c -main character
+ */
 int _islower(int c)
 {
-	if(c >= 'a' && c <= 'z')
+	if (c >= 'a' && c <= 'z')
 {
 	return (1);
 }
