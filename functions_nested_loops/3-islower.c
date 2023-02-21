@@ -2,7 +2,7 @@
 /**
  * _islower - main func
  * Return: Always 0 (Success)
- * c -main character
+ * @c: The character to print
  */
 int _islower(int c)
 {
