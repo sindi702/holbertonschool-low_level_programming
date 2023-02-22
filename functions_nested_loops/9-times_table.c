@@ -3,11 +3,11 @@
 /**
  * times_table - main func
  * Return: 0 if successful
- * 
+ *
  */
 void times_table(void)
 {
-	int x, y,z;
+	int x, y, z;
 
 	for (x = 0; x < 10; x++)
 {
