@@ -3,13 +3,11 @@
 /**
  * jack_bauer - main func
  * Return: Always 0 (Success)
- * @hour: The character to print
- * @minute: The character to print
+ *
  */
 void jack_bauer(void)
 {
-	int hour;
-	int minute;
+	int hour,minute;
 
 	for (hour = 0; hour < 24; hour++)
 	{
