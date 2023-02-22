@@ -1,32 +1,43 @@
-#include <unistd.h>
 #include "main.h"
 #include <stdio.h>
 /**
- * print_to_98 - main func
- * @n: first int
- * Return: sum of int x and int y
+ * print_to_98 - Prints all natural numbers from n to 98
+ * @n: The number to start printing from
+ *
+ * Return: Always 0.
  */
 void print_to_98(int n)
 {
-	int j;
-
-	if (n >= 98)
+	if (n <= 98)
 	{
-		for (j = n; j >= 98; j--)
+		for (; n <= 98; n++)
 		{
-			printf("%d", j);
-			
-			if (j != 98)															printf(", ");
+			if (n == 98)
+			{
+				printf("%d", n);
+				printf("\n");
+				break;
+			}
+			else
+			{
+				printf("%d, ", n);
+			}
 		}
 	}
 	else
-{
-	for (j = n; j <= 98; j++)
 	{
-		printf("%d", j);
-																			if (j != 98)
-																				printf(", ");
+		for (; n >= 98; n--)
+		{
+			if (n == 98)
+			{
+				printf("%d", n);
+				printf("\n");
+				break;
+			}
+			else
+			{
+				printf("%d, ", n);
+			}
+		}
 	}
-}
-					printf("\n");
 }
