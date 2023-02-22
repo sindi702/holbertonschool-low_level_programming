@@ -16,6 +16,6 @@ else if (n < 0)
 }
 else
 {
-	return(0);
+	return (0);
 }
 }
