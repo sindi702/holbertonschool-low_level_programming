@@ -1,9 +1,9 @@
 #include <unistd.h>
 #include "main.h"
 /**
- * isupper - main function
- * @c: parameter
- * Return: 1 if uppercase and 0 if false
+ * mul - main function
+ * @a: parameter
+ * @a: parameter
  */
 int mul(int a, int b)
 {
