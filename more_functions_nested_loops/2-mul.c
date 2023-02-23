@@ -2,10 +2,10 @@
 #include "main.h"
 /**
  * mul - main function
- * @a: parameter
- * @a: parameter
+ * @a: first parameter
+ * @b: second parameter
  */
 int mul(int a, int b)
 {
-	return (a*b);
+	return (a * b);
 }
