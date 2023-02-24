@@ -12,5 +12,6 @@ void print_numbers(void)
 	{
 		if (a!='2' && a!='4' )
 			_putchar('0' + a);
+	}
 		_putchar('\n');
 }
