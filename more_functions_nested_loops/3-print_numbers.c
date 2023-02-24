@@ -2,16 +2,15 @@
 #include "main.h"
 /**
  * print_numbers - main function
- * @a: first parameter
- * Return: a 
+ * Return: 1 if upercase 
  */
 void print_numbers(void)
 {
-	int a ;
-
-       for(a=0 ; a<=9 ;a++)
-       {
-	       _putchar(a);
-       }	       
-	_putchar("\n");
+	int a;
+	
+	for(a = 0 ; a <= 9 ; a++)
+	{
+	       _putchar('0' + a);
+	}	       
+	_putchar('\n');
 }
