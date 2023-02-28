@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- *  * _strlen - main function
- *   * @s: The character to print
- *    */
+ * _strlen - main function
+ * @s: The character to print
+ */
 int _strlen(char *s)
 {
 	int i = 0;
