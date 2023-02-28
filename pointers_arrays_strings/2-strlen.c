@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  *  * _strlen - main function
- *   * @i: The character to print
+ *   * @s: The character to print
  *    */
 int _strlen(char *s)
 {
