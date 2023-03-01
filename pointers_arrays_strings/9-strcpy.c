@@ -1,5 +1,5 @@
 #include "main.h"
-/*
+/**
  * _strcpy - main function
  * @dest: param
  * @src: param
