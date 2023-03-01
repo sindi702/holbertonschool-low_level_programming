@@ -1,7 +1,6 @@
 #include "main.h"
 #include <stdio.h>
 /**
- *
  * print_array - main function
  *  @a: param
  *  @n: param
