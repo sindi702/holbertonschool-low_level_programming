@@ -20,15 +20,18 @@ int _atoi(char *s)
 		while (s[c] >= 48 && s[c] <= 57)
 		{
 			issi = 1;
-			ni = (ni * 10) + (s[c] - '0);
+			ni = (ni * 10) + (s[c] - '0');
 			c++;
 		}
+
 		if (issi == 1)
 		{
-			break
+			break;
 		}
+
 		c++;
 	}
+
 	ni *= min;
 	return (ni);
 }
