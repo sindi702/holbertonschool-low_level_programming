@@ -2,7 +2,7 @@
 /**
  * leet - main function
  * Return: returns sum
- * @string: param
+ * @s: param
  */
 char *leet(char *s)
 {
