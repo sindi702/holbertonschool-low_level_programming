@@ -4,15 +4,16 @@
  *
  *
  */
-char *string_toupper(char *)
+char *string_toupper(char *s)
 {
-	char p = str;
-	while (*p != '\0')
+	int i = 0;
+	while (s[i] != '\0')
 	{
-		if (*p >= 'a' && *p <= 'z')
+		if (s[i] >= 'a' && s[i] <= 'z')
 		{
-			*p = *p - 'a' + 'A';
+			 s[i] = toupper(s[i]);
 		}
-		p++;
-		return (str);
+		i++;
 	}
+	return s;
+}
