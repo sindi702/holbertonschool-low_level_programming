@@ -2,7 +2,7 @@
 /**
  * string_toupper - main function
  * Return: returns sum
- * @string: param
+ * @s: param
  *
  */
 char *string_toupper(char *s)
