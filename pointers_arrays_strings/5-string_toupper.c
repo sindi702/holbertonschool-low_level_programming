@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 /**
  * string_toupper - main function
  * Return: returns sum
@@ -9,10 +8,11 @@
 char *string_toupper(char *s)
 {
 	int i;
-	for (i = 0; string[i] != '\0'; i++)
+
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (string[i] >= 'a' && string[i <= 'b'])
-			string[i] -= 32;
+		if (s[i] >= 'a' && s[i <= 'b'])
+			s[i] -= 32;
 	}
-	return (string);
+	return (s);
 }
