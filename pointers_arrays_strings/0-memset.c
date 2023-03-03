@@ -1,7 +1,6 @@
 #include "main.h"
 /**
  * _memset - main function
- * @dest: param
  * @s: param
  * @n: param
  * @b: param
