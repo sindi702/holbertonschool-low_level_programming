@@ -14,6 +14,7 @@ void print_diagsums(int *a, int size)
 	i = 0;
 	sum1 = 0;
 	sum2 = 0;
+
 	while (i < size)
 	{
 		sum1 += a[(size + 1) * i];
