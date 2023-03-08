@@ -1,8 +1,9 @@
 #include "main.h"
 #include <stdio.h>
 /*
- *
- *
+ * factorial - writes the character c to stdout
+ * @n: The character to print
+ * Return: strlen value
  */
 int factorial(int n)
 {
