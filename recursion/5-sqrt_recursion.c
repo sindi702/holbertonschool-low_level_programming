@@ -1,12 +1,9 @@
 #include "main.h"
 /**
- * _sqrt_recursion - writes the character c to stdout
- * find - writes the character c to stdout
- * @n: param
+ * find - second function
+ * @n: second param
  * @res: param
- * Return: strlen value
  * Return: res
- *
  */
 int find(int n, int res)
 {
@@ -20,10 +17,9 @@ int find(int n, int res)
 		return (find(n, res + 1));
 }
 /**
- * find - second function
- * @n: second param
- * @res: param
- * Return: res
+ * _sqrt_recursion - writes the character c to stdout
+ * @n: param
+ * Return: strlen value
  */
 int _sqrt_recursion(int n)
 {
