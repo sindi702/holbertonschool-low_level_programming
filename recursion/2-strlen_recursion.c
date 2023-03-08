@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdio.h>
-/*
+/**
  * _strlen_recursion - writes the character c to stdout
  * @s: The character to print
  * Return: strlen value
