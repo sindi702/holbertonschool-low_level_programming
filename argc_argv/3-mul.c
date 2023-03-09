@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- *
  * main - main function
  * @argc: parameter number
  * @argv: all parameters
