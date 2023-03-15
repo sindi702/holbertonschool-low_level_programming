@@ -8,38 +8,34 @@
  * @s2: string to concatenate
  * Return: ptr
  */
-char *str_concat(char *s1, char *s2)
+char *_strdup(char *str)
 {
-	char *ptr;
-	size_t len1 = 0, len2 = 0, tlen, i = 0;
+	int i;
+	int len;
+	char *dup;
 
-	if (s1 == NULL)
-		s1 = "";
-	if (s2 == NULL)
-		s2 = "";
-	while (s1[len1] != '\0')
+	if (str == NULL)
 	{
-		len1++;
-	}
-	while (s2[len2] != '\0')
-	{
-		len2++;
-	}
-	ptr = malloc(len1 + len2 + 1);
-	if (ptr == NULL)
 		return (NULL);
-	while (*s1 != '\0')
-	{
-		pnt[i] = *s1;
-		s1++;
-		i++
 	}
-	while (*s2 != '\0')
+
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		pnt[i] = *s2;
-		s2++;
-		i++;
+		len++;
 	}
-	pnt[i] = '\0';
-	return (ptr);
+
+	dup = malloc((len + 1) * sizeof(char));
+
+	if (dup == NULL)
+	{
+		return (NULL);
+	}
+
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		dup[i] = str[i];
+	}
+	dup[len] = '\0';
+
+	return (dup);
 }
