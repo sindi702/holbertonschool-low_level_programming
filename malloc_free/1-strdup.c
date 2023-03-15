@@ -3,10 +3,9 @@
 #include "main.h"
 
 /**
- * _str_concat - create array function
- * @s1: string to concatenate
- * @s2: string to concatenate
- * Return: ptr
+ * _strdup - function that returns a pointer to a new string
+ * @str: pointer
+ * Return: Nothing.
  */
 char *_strdup(char *str)
 {
