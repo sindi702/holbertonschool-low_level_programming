@@ -2,10 +2,7 @@
 #include "dog.h"
 #include <stdio.h>
 /**
- * print_dog function
- * @name: name
- * @owner: owner
- * @age: age
+ * print_dog - function
  * @d: struct
  */
 void print_dog(struct dog *d)
