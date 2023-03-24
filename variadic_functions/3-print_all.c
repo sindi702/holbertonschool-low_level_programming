@@ -1,88 +1,77 @@
-#include "variadic_functions.h"
-#include <stdarg.h>
 #include <stdio.h>
-#include <stdlib.h>
-
+#include <stdarg.h>
 /**
- *  * print_char - function that prints a character
- *   * @list: list of arguments
- *    */
-void print_char(va_list list)
+ * print_ch - print char function
+ * @ch: char to print
+ */
+void print_ch(char ch)
 {
-	        printf("%c", va_arg(list, int));
+	printf("%c", ch);
 }
 
 /**
- *  * print_int - function that prints an integer
- *   * @list: list of arguments
- *    */
-void print_int(va_list list)
+ * print_str - print string function
+ * @str: string to print
+ */
+void print_str(char *str)
 {
-	        printf("%d", va_arg(list, int));
+	if (str == NULL)
+		str = "(nil)";
+	printf("%s", str);
 }
 
 /**
- *  * print_float - function that prints a float
- *   * @list: list of arguments
- *    */
-void print_float(va_list list)
+ * print_int - print num function
+ * @num: number of arguments to print
+ */
+void print_int(int num)
 {
-	        printf("%f", va_arg(list, double));
+	printf("%i", num);
 }
 
 /**
- *  * print_string - function that prints a string
- *   * @list: list of arguments
- *    */
-void print_string(va_list list)
+ * print_float - print num function
+ * @numf: number of arguments to print
+ */
+void print_float(float numf)
 {
-	        char *str;
-
-		        str = va_arg(list, char *);
-			        if (str == NULL)
-					                printf("(nil)");
-				        else
-						                printf("%s", str);
+	printf("%f", numf);
 }
-
 /**
- *  * print_all - function that prints anything
- *   * @format: list of types of arguments passed to the function
- *    * c: char
- *     * i: integer
- *      * f: float
- *       * s: char * (if the string is NULL, print (nil) instead)
- *        * any other char should be ignored
- *         */
+ * print_all - print num function
+ * @format: number of arguments to print
+ */
 void print_all(const char * const format, ...)
 {
-	        int i = 0;
-		        int j;
-			        va_list arg_list;
-				        char *sep = "";
-					        print_t print_functions[] = {
-							                {"c", print_char},
-									                {"i", print_int},
-											                {"f", print_float},
-													                {"s", print_string},
-															                {NULL, NULL}
-									        };
+	va_list va;
+	unsigned int i = 0;
 
-						        va_start(arg_list, format);
-
-							        while (format && format[i])
-									        {
-											                j = 0;
-													                while (print_functions[j].f_type && format[i] != *print_functions[j].f_type)
-																                        j++;
-															                if (print_functions[j].f_type)
-																		                {
-																					                        printf("%s", sep);
-																								                        print_functions[j].print(arg_list);
-																											                        sep = ", ";
-																														                }
-																	                i++;
-																			        }
-								        printf("\n");
-									        va_end(arg_list);
+	va_start(va, format);
+	while (format != NULL && format[i] != '\0')
+	{
+		switch (format[i])
+		{
+			case 'c':
+				print_ch(va_arg(va, int));
+				break;
+			case 's':
+				print_str(va_arg(va, char *));
+				break;
+			case 'i':
+				print_int(va_arg(va, int));
+				break;
+			case 'f':
+				print_float(va_arg(va, double));
+				break;
+			default:
+				break;
+		}
+		if ((format[i] == 'c' || format[i] == 's' || format[i] == 'i'|| format[i] == 'f') &&  format[i + 1] != '\0')
+		{
+			printf(", ");
+		}
+		i++;
+	}
+	printf("\n");
+	va_end(va);
 }
