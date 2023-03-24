@@ -46,7 +46,7 @@ void print_all(const char * const format, ...)
 	while (format[i] != '\0' && format != NULL)
 	{
 		j = 0;
-		while (print_functions[j].f_type != NULL)
+		while (j < 4 && format[i] != *print_functions[j].f_type)
 			j++;
 		if (j < 4)
 		{
