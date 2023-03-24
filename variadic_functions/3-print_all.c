@@ -49,24 +49,24 @@ void print_all(const char * const format, ...)
 	va_list arg_list;
 	char *sep = "";
 	print_t print_functions[] = {
-		{"c" , print_char},
-		{"i" , print_int},
-		{"f" , print_float},
-		{"s" , print_string},
-		{NULL , NULL}
+		{"c", print_char},
+		{"i", print_int},
+		{"f", print_float},
+		{"s", print_string},
+		{0, NULL}
 	};
 
 	va_start(arg_list , format);
 
-	while (format[i] != '\0' && format != NULL)
-	{
+	while (format && format[i])
+	{ 
 		j = 0;
-		while (j < 4 && format[i] != *print_functions[j].f_type)
+		while (print_functions[j].f_type && format[i] != print_functions[j].f_type)
 			j++;
-		if (j < 4)
+		if (print_functions[j].f_type)
 		{
 			printf("%s" , sep);
-			print_functions[j].print(arg_list);
+		u	print_functions[j].print(arg_list);
 			sep = ", ";
 		}
 		i++;
