@@ -3,22 +3,33 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- *
- *
+ * print_char - cchar fun
+ * @list: list of elem
  */
-
 void print_char(va_list list)
 {
 	printf("%c" ,va_arg(list , int));
 }
+/**
+ * print_int - int fun
+ * @list: lists
+ */
 void print_int(va_list list)
 {
 	printf("%i" , va_arg(list , int));
 }
+/**
+ * print_float - un of floats
+ * @list: list
+ */
 void print_float(va_list list)
 {
 	printf("%f" , va_arg(list , double));
 }
+/**
+ * print_string - main fun
+ * @list: list
+ */
 void print_string(va_list list)
 {
 	char *str ;
@@ -27,6 +38,10 @@ void print_string(va_list list)
 		printf("(nil)");
 	printf("%s" , str);
 }
+/**
+ * print_all - print fun
+ * @format: format type
+ */
 void print_all(const char * const format, ...)
 {
 	int i = 0;
@@ -45,8 +60,6 @@ void print_all(const char * const format, ...)
 
 	while (format[i] != '\0' && format != NULL)
 	{
-		if (format[i] = NULL)
-			break;
 		j = 0;
 		while (j < 4 && format[i] != *print_functions[j].f_type)
 			j++;
@@ -61,5 +74,3 @@ void print_all(const char * const format, ...)
 	printf("\n");
 	va_end (arg_list);
 }
-
-
