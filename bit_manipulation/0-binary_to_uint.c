@@ -2,10 +2,11 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- *  * binary_to_uint - convert binary to unsigned int
- *   * @b: binary number to convert
- *    * Return: unsigned int
- *     */
+ * binary_to_uint - convert binary to unsigned int
+ * @b: binary number to convert
+ * Return: unsigned int
+ */
+
 unsigned int binary_to_uint(const char *b)
 {
 	int i = 0;
@@ -25,7 +26,7 @@ unsigned int binary_to_uint(const char *b)
 	}
 		if (b[i] == '1')
 			i += j;
-		
+
 		i *= 2;
 		return (value);
 }
