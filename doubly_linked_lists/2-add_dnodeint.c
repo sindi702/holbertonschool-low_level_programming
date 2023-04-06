@@ -1,4 +1,4 @@
-nclude <stdlib.h>
+#include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
 #include "lists.h"
@@ -24,5 +24,5 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 	if (*head != NULL)
 		(*head)->prev = new;
 	*head = new;
-	return (*head);
+	return (new);
 }
