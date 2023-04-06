@@ -8,24 +8,25 @@ nclude "main.h"
  *     */
 unsigned int binary_to_uint(const char *b)
 {
-	int i = 0, j;
+	int i = 0;
+	int j = 1;
 	unsigned int num = 1, uint = 0;
 
 	if (b == NULL)
-	{
 		return (0);
-	}
+
 	while (b[i] != '\0')
-		i++;
-	for (j = i - 1; j >= 0; j--)
 	{
-		if (b[j] != '0' && b[j] != '1')
-		{
+		if (b[i] != '0' && b[i] != '1')
 			return (0);
-		}
-		if (b[j] == '1')
-			uint += num;
-		num *= 2;
+		value <<= 1;
+		value += b[i] - '0';
+		i++;
 	}
-	return (uint);
+		if (b[i] == '1')
+		{
+			i += j;
+		}
+		i *= 2;
+		return (uint);
 }
