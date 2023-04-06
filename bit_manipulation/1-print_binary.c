@@ -1,8 +1,9 @@
 #include "main.h"
 /**
- *  * print_binary - print a binary number function
- *   * @n: binary number to print
- *    */
+ * print_binary - print a binary number function
+ * @n: binary number to print
+ */
+
 void print_binary(unsigned long int n)
 {
 	if (n > 1)
