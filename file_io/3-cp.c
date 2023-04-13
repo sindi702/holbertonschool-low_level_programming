@@ -4,6 +4,7 @@
  * @argc: nr of arg
  * @argv: array
  * Return: Return 0 for succes
+ *
  */
 int main(int argc, char *argv[])
 {
@@ -41,6 +42,12 @@ void cp(char *file_from, char *file_to)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 		exit(99);
+	}
+	r_src = read(file_src, count, 1024);
+	if (r_src == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
+		exit(98);
 	}
 	while (r_src != 0)
 	{
