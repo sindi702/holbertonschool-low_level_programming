@@ -1,3 +1,6 @@
+#include <stdlib.h>
+#include <stddef.h>
+#include <stdio.h>
 #include "hash_tables.h"
 /**
  * hash_table_delete - get node
