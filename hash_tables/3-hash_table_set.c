@@ -1,5 +1,6 @@
 #include "hash_tables.h"
 #include <string.h>
+#include <stdlib.h>
 /**
  * hash_table_set - create a hash table
  * @value: value
