@@ -16,14 +16,14 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (key == NULL || ht == NULL)
 		return (0);
 	idx = key_index((const unsigned char *)key, ht->size);
-	curr_node = ht->array[index];
+	curr_node = ht->array[idx];
 
 	while(curr_node){
 		if (strcmp(curr_node->key, key) == 0)
 		{
 			free(curr_node->value);
 			curr_node->value = strdup(value);
-			if(new_node->value == NULL)
+			if(new->value == NULL)
 				return (0);
 			return (1);
 		}
